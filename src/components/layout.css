@@ -1,6 +1,7 @@
+/*comment goes here*/
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100pixels;
   -webkit-text-size-adjust: 100%;
 }
 body {

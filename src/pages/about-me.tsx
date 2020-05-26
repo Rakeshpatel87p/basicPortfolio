@@ -4,14 +4,15 @@ import { PageProps, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { checkPropTypes } from "prop-types"
 
-const SecondPage = (props: PageProps) => (
+const AboutMe = (props: PageProps) => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2 ({props.path})</p>
+    <SEO title="Page About Me" />
+    <h1>Rakesh, this is about me {props.path}</h1>
+    <p>Welcome to page</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default SecondPage
+export default AboutMe

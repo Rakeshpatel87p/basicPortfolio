@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const fs = require("fs");
+const data = require("./content/indivProjects");
 
-// You can delete this file if you're not using it
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions;
+
+  const template = require.resolve("./src/pages/indivProjects.js");
+
+  data.forEach(project => {
+    const path = project.title;
+
+    createPage({
+      path: `projects/${path}`,
+      component: template,
+      context: project,
+    });
+  });
+};
