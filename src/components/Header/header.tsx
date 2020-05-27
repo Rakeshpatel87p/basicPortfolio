@@ -4,7 +4,11 @@ import navLinks from "./content.json";
 
 import Nav from "./styles/nav";
 
-const Header = ({ siteTitle }) => (
+interface Props {
+  siteTitle: string;
+}
+
+const Header = ({ siteTitle }: Props): JSX.Element => (
   <header>
     <h1>
       <Link>{siteTitle}</Link>
