@@ -54,7 +54,7 @@
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "lint:style": "stylelint 'src/**/*.css'"
+    "lint:style": "stylelint 'src/**/*.{js, tsc}'"
   },
   "repository": {
     "type": "git",
