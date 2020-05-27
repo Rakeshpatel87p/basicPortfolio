@@ -9,9 +9,8 @@ import Grid from "../components/Grid";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hey Party People, How goes it?</h1>
-    <Link to="/about-me">Learn About Me</Link>
     <Grid />
+    <Link to="/about-me">Learn About Me</Link>
   </Layout>
 );
 
