@@ -40,5 +40,6 @@ module.exports = {
       resolve: "gatsby-plugin-stylelint",
       options: { files: ["**/*.{js,jsx}"] },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };
