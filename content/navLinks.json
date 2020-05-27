@@ -1,0 +1,5 @@
+[
+  { "name": "Projects", "link": "/" },
+  { "name": "About Me", "link": "/about-me" },
+  { "name": "Contact", "link": "/contact" }
+]
