@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "gatsby";
 import navLinks from "./content.json";
 
-import Nav from "./styles/nav";
+import HeaderStyle from "./styles/header";
 
 interface Props {
   siteTitle: string;
 }
 
 const Header = ({ siteTitle }: Props): JSX.Element => (
-  <header>
+  <HeaderStyle>
     <h1>
       <Link>{siteTitle}</Link>
     </h1>
-    <Nav>
+    <nav>
       <ul>
         {navLinks.map((link, i) => (
           <li key={`${link.name}_${i}`}>
@@ -21,8 +21,8 @@ const Header = ({ siteTitle }: Props): JSX.Element => (
           </li>
         ))}
       </ul>
-    </Nav>
-  </header>
+    </nav>
+  </HeaderStyle>
 );
 
 export default Header;
