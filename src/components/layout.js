@@ -6,10 +6,10 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./Header/header";
+import useSticky from "../hooks/useSticky";
 import { ThemeProvider } from "styled-components";
 import theme from "../theme/styles";
 
@@ -23,21 +23,22 @@ const Layout = ({ children }) => {
       }
     }
   `);
+  const { isSticky, element } = useSticky();
 
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          element={element}
+          siteTitle={data.site.siteMetadata.title}
+          sticky={isSticky}
+        />
         <div>
           <main>{children}</main>
         </div>
       </>
     </ThemeProvider>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
