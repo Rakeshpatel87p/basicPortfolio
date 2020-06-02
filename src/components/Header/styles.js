@@ -6,6 +6,16 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   padding: 0 30px;
 
+  ${props =>
+    props.isSticky &&
+    `
+		background: white;
+		color: red;
+    position: sticky;
+    color: black;
+    top: 0;
+		`}
+
   h1 {
     color: ${props => props.theme.color};
   }
@@ -14,10 +24,6 @@ const HeaderStyle = styled.header`
     border-bottom: 0;
     text-decoration: none;
     transition: 0.3s border ease-in-out;
-
-    &:hover {
-      border-bottom: 3px solid purple;
-    }
   }
 
   ul {

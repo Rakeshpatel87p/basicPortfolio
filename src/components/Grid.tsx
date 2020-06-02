@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import data from "../../content/indivProjects";
 
-const Grid = () => {
+import styled from "styled-components";
+
+const GridStyles = styled.div`
+  height: 100vh;
+`;
+
+const Grid = (): JSX.Element => {
   return (
-    <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
+    <GridStyles>
       <ul>
         {data.map((item, i) => (
           <li key={`item${i}`}>
@@ -12,7 +18,7 @@ const Grid = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </GridStyles>
   );
 };
 
