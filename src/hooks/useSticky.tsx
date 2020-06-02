@@ -20,7 +20,7 @@ function useSticky(): stickyReturnVal {
     return () => {
       window.removeEventListener("scroll", () => handleScroll());
     };
-  }, [handleScroll]);
+  }, [setSticky]);
 
   return { isSticky, element };
 }

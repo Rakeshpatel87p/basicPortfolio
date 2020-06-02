@@ -7,13 +7,13 @@ import { css } from "styled-components";
 
 interface Props {
   siteTitle: string;
-  isSticky: boolean;
+  sticky: boolean;
   element: HTMLElement;
 }
 
 const Header = (props: Props): JSX.Element => {
   return (
-    <HeaderStyle ref={props.element} isSticky={props.isSticky}>
+    <HeaderStyle ref={props.element} isSticky={props.sticky}>
       <h1>
         <Link to={"/"}>{props.siteTitle}</Link>
       </h1>
